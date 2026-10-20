@@ -1,0 +1,18 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Shopify Products & Store Leads Output",
+  "description": "Output dataset and summary report of extracted Shopify products, collections, or B2B store leads.",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Scraped Shopify Items (Dataset)",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Run Summary Report (Key-Value Store)",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}

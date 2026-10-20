@@ -1,0 +1,39 @@
+{
+  "title": "Shopify Products & B2B Store Leads Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "stores": {
+      "title": "Shopify Store Domains or URLs",
+      "type": "array",
+      "description": "List of Shopify store domains or URLs (e.g. ['allbirds.com', 'kyliecosmetics.com']).",
+      "editor": "stringList",
+      "default": ["allbirds.com", "kyliecosmetics.com"],
+      "prefill": ["allbirds.com", "kyliecosmetics.com"]
+    },
+    "mode": {
+      "title": "Scraping Mode",
+      "type": "string",
+      "description": "Choose 'products' for product catalog & pricing, 'store_leads' for B2B agency lead enrichment (contacts + ad pixels + catalog stats), or 'collections' for store collections.",
+      "editor": "select",
+      "default": "products",
+      "enum": ["products", "store_leads", "collections"],
+      "enumTitles": [
+        "Products & Pricing Catalog (products.json)",
+        "B2B Store Lead & Pixel Intelligence (store_leads)",
+        "Store Collections (collections.json)"
+      ]
+    },
+    "maxResults": {
+      "title": "Max Results per Store",
+      "type": "integer",
+      "description": "Maximum number of products or collections to extract per store.",
+      "editor": "number",
+      "default": 10,
+      "prefill": 10,
+      "minimum": 1,
+      "maximum": 5000
+    }
+  },
+  "required": ["stores"]
+}
