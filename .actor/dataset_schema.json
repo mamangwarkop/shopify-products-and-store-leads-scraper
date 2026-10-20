@@ -1,0 +1,46 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "storeDomain": { "type": ["string", "null"], "title": "Store Domain" },
+      "mode": { "type": ["string", "null"], "title": "Mode" },
+      "title": { "type": ["string", "null"], "title": "Product / Store Title" },
+      "vendor": { "type": ["string", "null"], "title": "Brand / Vendor" },
+      "productType": { "type": ["string", "null"], "title": "Product Type" },
+      "price": { "type": ["number", "null"], "title": "Price" },
+      "compareAtPrice": { "type": ["number", "null"], "title": "Compare At Price" },
+      "discountPercent": { "type": ["number", "null"], "title": "Discount %" },
+      "inStock": { "type": ["boolean", "null"], "title": "In Stock" },
+      "variantsCount": { "type": ["integer", "null"], "title": "Variants Count" },
+      "productUrl": { "type": ["string", "null"], "title": "Product URL" },
+      "imageUrl": { "type": ["string", "null"], "title": "Primary Image URL" },
+      "emails": { "type": ["array", "null"], "title": "Contact Emails" },
+      "detectedAdPixels": { "type": ["array", "null"], "title": "Detected Ad Pixels" },
+      "missingAdPixels": { "type": ["array", "null"], "title": "Missing Ad Pixels" }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "storeDomain",
+          "mode",
+          "title",
+          "vendor",
+          "productType",
+          "price",
+          "compareAtPrice",
+          "discountPercent",
+          "inStock",
+          "productUrl"
+        ]
+      },
+      "display": {
+        "component": "table"
+      }
+    }
+  }
+}

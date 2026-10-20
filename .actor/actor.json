@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "shopify-products-and-store-leads-scraper",
+  "title": "Shopify Products, Prices & B2B Store Leads Scraper",
+  "description": "Fast, zero-browser Shopify scraper. Extract product catalogs, prices, discounts, variants, SKUs, stock status, or enrich Shopify domains into B2B agency leads (emails, socials, ad pixels, Klaviyo, price range).",
+  "version": "1.0",
+  "buildTag": "latest",
+  "meta": {
+    "templateId": "python-start"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./key_value_store_schema.json"
+  },
+  "dockerfile": "../Dockerfile"
+}
